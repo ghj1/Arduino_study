@@ -14,21 +14,22 @@ void loop() {
   x = Serial.readString().toInt();
   
   if (x == 1){
-  digitalWrite(22,0);
-   }
+  digitalWrite(22,1);
+  delay(1000);
+  }
   if (x == 2){
-  digitalWrite(23,0);
+  digitalWrite(23,1);
    }
   if (x == 3){
-  digitalWrite(24,0);
+  digitalWrite(24,1);
    }
   if (x == 4){
-  digitalWrite(25,0);
+  digitalWrite(25,1);
    }
   if (x = 5){
-  digitalWrite(22, 1);
-  digitalWrite(23, 1);
-  digitalWrite(24, 1);
-  digitalWrite(25, 1);
+  digitalWrite(22, 0);
+  digitalWrite(23, 0);
+  digitalWrite(24, 0);
+  digitalWrite(25, 0);
    }
   }
