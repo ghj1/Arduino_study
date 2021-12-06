@@ -6,5 +6,10 @@ void setup() {
 void loop() {
  while (!Serial.available());
  x = Serial.readString().toInt();
+ if (x >= 20){
+ Serial.println(x - 1);
+ }
+ else{
  Serial.println(x + 1);
+ }
 }
