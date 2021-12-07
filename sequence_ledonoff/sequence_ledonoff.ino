@@ -1,4 +1,4 @@
-int x;
+int number;
 void setup() {
   Serial.begin(115200);
   Serial.setTimeout(1);
@@ -11,23 +11,31 @@ void setup() {
 
 void loop() {
   while (!Serial.available());
-  x = Serial.readString().toInt();
-  if (x = 1){
+  {
+   number = Serial.read();
+  }  
+  if (number == '1'){
   digitalWrite(22,0);
+  delay(500);
   }
-  if (x = 2){
-  digitalWrite(23,0);  
+  else if (number == '2'){
+  digitalWrite(23,0);
+  delay(500);  
   }
-  if (x = 3){
-  digitalWrite(24,0);  
+  else if (number == '3'){
+  digitalWrite(24,0); 
+  delay(500); 
   }
-  if (x = 4){
-  digitalWrite(25,0);  
+  else if (number == '4'){
+  digitalWrite(25,0);
+  delay(500);  
   }
-  if (x  = 5){
+  else if (number  == '5'){
   digitalWrite(22,1);
   digitalWrite(23,1);
   digitalWrite(24,1);
   digitalWrite(25,1);
+  delay(500);
+  
   }
 }
